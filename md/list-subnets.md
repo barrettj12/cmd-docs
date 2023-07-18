@@ -4,7 +4,7 @@
 List subnets known to Juju.
 
 ## Usage
-```juju subnets [options] [--space <name>] [--zone <name>] [--format yaml|json] [--output <path>]```
+```juju list-subnets [options] [--space <name>] [--zone <name>] [--format yaml|json] [--output <path>]```
 
 ### Options
 | Flag | Default | Usage |

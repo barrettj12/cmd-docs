@@ -187,7 +187,6 @@
 187. [upgrade-machine](#upgrade-machine)
 188. [upgrade-model](#upgrade-model)
 189. [users](#users)
-190. [version](#version)
 191. [wait-for](#wait-for)
 192. [whoami](#whoami)
 ---
@@ -2734,7 +2733,7 @@ accepted by the debug-hooks command.
 Launch a tmux session to debug hooks and/or actions.
 
 ## Usage
-```juju debug-hooks [options] <unit name> [hook or action names]```
+```juju debug-hook [options] <unit name> [hook or action names]```
 
 ### Options
 | Flag | Default | Usage |
@@ -4392,7 +4391,7 @@ Valid access levels are:
 
 ---
 
-# 
+# HELP
 
 ## Summary
 Show help on a command or other topic.
@@ -4837,7 +4836,7 @@ stop watching and destroy the models directly through the cloud provider.
 List actions defined for an application.
 
 ## Usage
-```juju actions [options] <application>```
+```juju list-actions [options] <application>```
 
 ### Options
 | Flag | Default | Usage |
@@ -4899,7 +4898,7 @@ See also:
 Display the resources for a charm in a repository.
 
 ## Usage
-```juju charm-resources [options] <charm>```
+```juju list-charm-resources [options] <charm>```
 
 ### Options
 | Flag | Default | Usage |
@@ -5037,7 +5036,7 @@ default tabular output, the current controller is marked with an asterisk.
 Lists Juju credentials for a cloud.
 
 ## Usage
-```juju credentials [options] [<cloud name>]```
+```juju list-credentials [options] [<cloud name>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -5297,7 +5296,7 @@ The active model is denoted by an asterisk.
 Lists shared endpoints.
 
 ## Usage
-```juju offers [options] [<offer-name>]```
+```juju list-offers [options] [<offer-name>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -5404,7 +5403,7 @@ To see operations corresponding to juju run tasks, specify an action name
 Display status information about known payloads.
 
 ## Usage
-```juju payloads [options] [pattern ...]```
+```juju list-payloads [options] [pattern ...]```
 
 ### Options
 | Flag | Default | Usage |
@@ -5441,7 +5440,7 @@ will be checked against the following info in Juju:
 Lists regions for a given cloud.
 
 ## Usage
-```juju regions [options] <cloud>```
+```juju list-regions [options] <cloud>```
 
 ### Options
 | Flag | Default | Usage |
@@ -5478,7 +5477,7 @@ Use --client option to list regions known locally on this client.
 Show the resources for an application or unit.
 
 ## Usage
-```juju resources [options] <application or unit>```
+```juju list-resources [options] <application or unit>```
 
 ### Options
 | Flag | Default | Usage |
@@ -5561,7 +5560,7 @@ Displays the secrets available for charms to use if granted access.
 List known spaces, including associated subnets.
 
 ## Usage
-```juju spaces [options] [--short] [--format yaml|json] [--output <path>]```
+```juju list-spaces [options] [--short] [--format yaml|json] [--output <path>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -5632,7 +5631,7 @@ key may be displayed.
 Lists storage details.
 
 ## Usage
-```juju storage [options] <filesystem|volume> ...```
+```juju list-storage [options] <filesystem|volume> ...```
 
 ### Options
 | Flag | Default | Usage |
@@ -5690,7 +5689,7 @@ Valid pool types are pool types that are registered for Juju model.
 List subnets known to Juju.
 
 ## Usage
-```juju subnets [options] [--space <name>] [--zone <name>] [--format yaml|json] [--output <path>]```
+```juju list-subnets [options] [--space <name>] [--zone <name>] [--format yaml|json] [--output <path>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -5722,7 +5721,7 @@ output to a file, use --output.
 Lists Juju users allowed to connect to a controller or model.
 
 ## Usage
-```juju users [options] [model-name]```
+```juju list-users [options] [model-name]```
 
 ### Options
 | Flag | Default | Usage |
@@ -6350,7 +6349,7 @@ Constraints for a specific application can be viewed with `juju constraints`.
 Displays or sets default configuration settings for new models.
 
 ## Usage
-```juju model-defaults [options] [[<cloud>/]<region> ]<model-key>[<=value>] ...]```
+```juju model-default [options] [[<cloud>/]<region> ]<model-key>[<=value>] ...]```
 
 ### Options
 | Flag | Default | Usage |
@@ -7025,7 +7024,7 @@ by using a web browser.
 Integrate two applications.
 
 ## Usage
-```juju integrate [options] <application>[:<relation>] <application>[:<relation>]```
+```juju relate [options] <application>[:<relation>] <application>[:<relation>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -7873,7 +7872,7 @@ associated subnets and "new-name" must not match another existing space.
 Marks unit errors resolved and re-executes failed hooks.
 
 ## Usage
-```juju resolved [options] [<unit> ...]```
+```juju resolve [options] [<unit> ...]```
 
 ### Options
 | Flag | Default | Usage |
@@ -8487,7 +8486,7 @@ to models.
 Sets local default credentials for a cloud on this client.
 
 ## Usage
-```juju default-credential [options] <cloud name> [<credential name>]```
+```juju set-default-credentials [options] <cloud name> [<credential name>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -8528,7 +8527,7 @@ without a credential name argument.
 Sets the default region for a cloud.
 
 ## Usage
-```juju default-region [options] <cloud name> [<region>]```
+```juju set-default-region [options] <cloud name> [<region>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -8846,7 +8845,7 @@ To see credentials from a controller, use "--controller" option.
 Shows credential information stored either on this client or on a controller.
 
 ## Usage
-```juju show-credential [options] [<cloud name> <credential name>]```
+```juju show-credentials [options] [<cloud name> <credential name>]```
 
 ### Options
 | Flag | Default | Usage |
@@ -10029,7 +10028,7 @@ use --region.
 Updates a controller credential for a cloud.
 
 ## Usage
-```juju update-credential [options] [<cloud-name> [<credential-name>]]```
+```juju update-credentials [options] [<cloud-name> [<credential-name>]]```
 
 ### Options
 | Flag | Default | Usage |
@@ -10427,4 +10426,162 @@ Lists Juju users allowed to connect to a controller or model.
 | --- | --- | --- |
 | `--all` | false | Include disabled users |
 | `--c`, `--controller` |  | Controller to operate in |
-| `--exact-time` |
+| `--exact-time` | false | Use full timestamp for connection times |
+| `--format` | tabular | Specify output format (json&#x7c;tabular&#x7c;yaml) |
+| `--o`, `--output` |  | Specify an output file |
+
+## Examples
+
+Print the users relevant to the current controller:
+
+    juju users
+    
+Print the users relevant to the controller "another":
+
+    juju users -c another
+
+Print the users relevant to the model "mymodel":
+
+    juju users mymodel
+
+
+## Details
+When used without a model name argument, users relevant to a controller are printed.
+When used with a model name, users relevant to the specified model are printed.
+
+
+
+---
+
+# VERSION
+> See also: [show-controller](#show-controller), [show-model](#show-model)
+
+## Summary
+Print the Juju CLI client version.
+
+### Options
+| Flag | Default | Usage |
+| --- | --- | --- |
+| `--all` | false | Prints all version information |
+| `--format` | smart | Specify output format (json&#x7c;smart&#x7c;yaml) |
+| `--o`, `--output` |  | Specify an output file |
+
+## Examples
+
+To see the version of Juju running on a particular controller, use
+  juju show-controller
+
+To see the version of Juju running on a particular model, use
+  juju show-model
+
+## Details
+
+Print only the Juju CLI client version.
+
+---
+
+# WAIT-FOR
+
+## Summary
+Wait for an entity to reach a specified state.
+
+## Usage
+```juju wait-for [options] <command> ...```
+
+### Options
+| Flag | Default | Usage |
+| --- | --- | --- |
+| `--description` | false | Show short description of plugin, if any |
+| `--h`, `--help` | false | Show help on a command or other topic. |
+
+## Details
+Waits for a specified model, machine, application or unit to reach a state
+defined by the supplied query.
+
+Examples:
+	juju wait-for unit mysql/0
+	juju wait-for application mysql --query='name=="mysql" &amp;&amp; (status=="active" &#x7c;&#x7c; status=="idle")'
+
+## Subcommands
+- [application](#wait-for_application)
+- [machine](#wait-for_machine)
+- [model](#wait-for_model)
+- [unit](#wait-for_unit)
+
+---
+
+# WAIT-FOR APPLICATION
+
+## Summary
+Wait for an application to reach a specified state.
+
+## Usage
+```juju wait-for application [options] [<name>]```
+
+### Options
+| Flag | Default | Usage |
+| --- | --- | --- |
+| `--B`, `--no-browser-login` | false | Do not use web browser for authentication |
+| `--m`, `--model` |  | Model to operate in. Accepts [&lt;controller name&gt;:]&lt;model name&gt;&#x7c;&lt;model UUID&gt; |
+| `--query` | life=="alive" &amp;&amp; status=="active" | query the goal state |
+| `--summary` | true | output a summary of the application query on exit |
+| `--timeout` | 10m0s | how long to wait, before timing out |
+
+## Details
+
+Waits for an application to reach a specified state.
+arguments:
+name
+   application name identifier
+options:
+--query (= 'life=="alive" &amp;&amp; status=="active"')
+   query represents the sought state of the specified application
+
+
+---
+
+# WAIT-FOR MACHINE
+
+## Summary
+Wait for a machine to reach a specified state.
+
+## Usage
+```juju wait-for machine [options] [<id>]```
+
+### Options
+| Flag | Default | Usage |
+| --- | --- | --- |
+| `--B`, `--no-browser-login` | false | Do not use web browser for authentication |
+| `--m`, `--model` |  | Model to operate in. Accepts [&lt;controller name&gt;:]&lt;model name&gt;&#x7c;&lt;model UUID&gt; |
+| `--query` | life=="alive" &amp;&amp; status=="started" | query the goal state |
+| `--summary` | true | output a summary of the application query on exit |
+| `--timeout` | 10m0s | how long to wait, before timing out |
+
+## Details
+
+Waits for a machine to reach a specified state.
+
+arguments:
+name
+   machine name identifier
+
+options:
+--query (= 'life=="alive" &amp;&amp; status=="started")
+   query represents the sought state of the specified machine
+
+
+---
+
+# WAIT-FOR MODEL
+
+## Summary
+Wait for a model to reach a specified state.
+
+## Usage
+```juju wait-for model [options] [<name>]```
+
+### Options
+| Flag | Default | Usage |
+| --- | --- | --- |
+| `--B`, `--no-browser-login` | false | Do not use web browser for authentication |
+| `--m`, `--model` |  | Model to operate in. Accepts [&lt;controller name&gt;:]&lt;model name&gt;&#x7c;&lt;mod

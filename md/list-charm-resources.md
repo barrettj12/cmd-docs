@@ -4,7 +4,7 @@
 Display the resources for a charm in a repository.
 
 ## Usage
-```juju charm-resources [options] <charm>```
+```juju list-charm-resources [options] <charm>```
 
 ### Options
 | Flag | Default | Usage |

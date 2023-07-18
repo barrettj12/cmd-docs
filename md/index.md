@@ -187,7 +187,6 @@
 187. [upgrade-machine](/t/10188)
 188. [upgrade-model](/t/10073)
 189. [users](/t/10175)
-190. [version](/t/10127)
 191. [wait-for](/t/10122)
 192. [whoami](/t/10148)
 ---

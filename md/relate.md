@@ -5,7 +5,7 @@
 Integrate two applications.
 
 ## Usage
-```juju integrate [options] <application>[:<relation>] <application>[:<relation>]```
+```juju relate [options] <application>[:<relation>] <application>[:<relation>]```
 
 ### Options
 | Flag | Default | Usage |

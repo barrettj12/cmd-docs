@@ -5,7 +5,7 @@
 Sets the default region for a cloud.
 
 ## Usage
-```juju default-region [options] <cloud name> [<region>]```
+```juju set-default-region [options] <cloud name> [<region>]```
 
 ### Options
 | Flag | Default | Usage |

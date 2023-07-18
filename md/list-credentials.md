@@ -5,7 +5,7 @@
 Lists Juju credentials for a cloud.
 
 ## Usage
-```juju credentials [options] [<cloud name>]```
+```juju list-credentials [options] [<cloud name>]```
 
 ### Options
 | Flag | Default | Usage |

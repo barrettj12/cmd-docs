@@ -5,7 +5,7 @@
 List known spaces, including associated subnets.
 
 ## Usage
-```juju spaces [options] [--short] [--format yaml|json] [--output <path>]```
+```juju list-spaces [options] [--short] [--format yaml|json] [--output <path>]```
 
 ### Options
 | Flag | Default | Usage |

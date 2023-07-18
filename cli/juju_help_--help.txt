@@ -27,7 +27,7 @@ MAAS (and more!), or even on your local machine via LXD.
 
 See https://juju.is for getting started tutorials and additional documentation.
 
-commands:
+Subcommands:
     actions                   - List actions defined for an application.
     add-cloud                 - Add a cloud definition to Juju.
     add-credential            - Adds a credential for a cloud to a local client and uploads it to a controller.
@@ -75,7 +75,6 @@ commands:
     disable-command           - Disable commands for the model.
     disable-user              - Disables a Juju user.
     disabled-commands         - List disabled commands.
-    documentation             - Generate the documentation for all commands
     download                  - Locates and then downloads a CharmHub charm.
     download-backup           - Download a backup archive file.
     enable-command            - Enable commands that had been previously disabled.
@@ -90,7 +89,6 @@ commands:
     firewall-rules            - Prints the firewall rules.
     grant                     - Grants access level to a Juju user for a model, controller, or application offer.
     grant-cloud               - Grants access level to a Juju user for a cloud.
-    help                      - Show help on a command or other topic.
     help-tool                 - Show help on a Juju charm hook tool.
     import-filesystem         - Imports a filesystem into the model.
     import-ssh-key            - Adds a public SSH key from a trusted identity source to a model.
@@ -218,6 +216,5 @@ commands:
     upgrade-machine           - Upgrade the Ubuntu base of a machine.
     upgrade-model             - Upgrades Juju on all machines in a model.
     users                     - Lists Juju users allowed to connect to a controller or model.
-    version                   - Print the Juju CLI client version.
     wait-for                  - Wait for an entity to reach a specified state.
     whoami                    - Print current login details.

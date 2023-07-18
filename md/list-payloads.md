@@ -4,7 +4,7 @@
 Display status information about known payloads.
 
 ## Usage
-```juju payloads [options] [pattern ...]```
+```juju list-payloads [options] [pattern ...]```
 
 ### Options
 | Flag | Default | Usage |

@@ -5,7 +5,7 @@
 List actions defined for an application.
 
 ## Usage
-```juju actions [options] <application>```
+```juju list-actions [options] <application>```
 
 ### Options
 | Flag | Default | Usage |

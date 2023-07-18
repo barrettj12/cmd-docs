@@ -4,7 +4,7 @@
 Launch a tmux session to debug hooks and/or actions.
 
 ## Usage
-```juju debug-hooks [options] <unit name> [hook or action names]```
+```juju debug-hook [options] <unit name> [hook or action names]```
 
 ### Options
 | Flag | Default | Usage |

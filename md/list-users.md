@@ -5,7 +5,7 @@
 Lists Juju users allowed to connect to a controller or model.
 
 ## Usage
-```juju users [options] [model-name]```
+```juju list-users [options] [model-name]```
 
 ### Options
 | Flag | Default | Usage |

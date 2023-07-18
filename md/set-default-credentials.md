@@ -5,7 +5,7 @@
 Sets local default credentials for a cloud on this client.
 
 ## Usage
-```juju default-credential [options] <cloud name> [<credential name>]```
+```juju set-default-credentials [options] <cloud name> [<credential name>]```
 
 ### Options
 | Flag | Default | Usage |

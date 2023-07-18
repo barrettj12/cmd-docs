@@ -4,7 +4,7 @@
 Lists storage details.
 
 ## Usage
-```juju storage [options] <filesystem|volume> ...```
+```juju list-storage [options] <filesystem|volume> ...```
 
 ### Options
 | Flag | Default | Usage |

@@ -5,7 +5,7 @@
 Displays or sets default configuration settings for new models.
 
 ## Usage
-```juju model-defaults [options] [[<cloud>/]<region> ]<model-key>[<=value>] ...]```
+```juju model-default [options] [[<cloud>/]<region> ]<model-key>[<=value>] ...]```
 
 ### Options
 | Flag | Default | Usage |

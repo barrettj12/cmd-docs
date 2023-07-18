@@ -19,13 +19,11 @@ Examples:
 	juju wait-for unit mysql/0
 	juju wait-for application mysql --query='name=="mysql" &amp;&amp; (status=="active" &#x7c;&#x7c; status=="idle")'
 
-commands:
-    application   - Wait for an application to reach a specified state.
-    documentation - Generate the documentation for all commands
-    help          - Show help on a command or other topic.
-    machine       - Wait for a machine to reach a specified state.
-    model         - Wait for a model to reach a specified state.
-    unit          - Wait for a unit to reach a specified state.
+## Subcommands
+- [application](/t/12345)
+- [machine](/t/12346)
+- [model](/t/12347)
+- [unit](/t/12348)
 
 ---
 

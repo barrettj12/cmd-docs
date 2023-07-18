@@ -5,7 +5,7 @@
 Lists shared endpoints.
 
 ## Usage
-```juju offers [options] [<offer-name>]```
+```juju list-offers [options] [<offer-name>]```
 
 ### Options
 | Flag | Default | Usage |

@@ -5,7 +5,7 @@
 Lists regions for a given cloud.
 
 ## Usage
-```juju regions [options] <cloud>```
+```juju list-regions [options] <cloud>```
 
 ### Options
 | Flag | Default | Usage |

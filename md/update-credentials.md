@@ -5,7 +5,7 @@
 Updates a controller credential for a cloud.
 
 ## Usage
-```juju update-credential [options] [<cloud-name> [<credential-name>]]```
+```juju update-credentials [options] [<cloud-name> [<credential-name>]]```
 
 ### Options
 | Flag | Default | Usage |

@@ -5,7 +5,7 @@
 Shows credential information stored either on this client or on a controller.
 
 ## Usage
-```juju show-credential [options] [<cloud name> <credential name>]```
+```juju show-credentials [options] [<cloud name> <credential name>]```
 
 ### Options
 | Flag | Default | Usage |

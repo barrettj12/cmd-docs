@@ -4,7 +4,7 @@
 Show the resources for an application or unit.
 
 ## Usage
-```juju resources [options] <application or unit>```
+```juju list-resources [options] <application or unit>```
 
 ### Options
 | Flag | Default | Usage |
