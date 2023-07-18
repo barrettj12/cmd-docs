@@ -1,0 +1,55 @@
+Usage: juju show-operation [options] <operation-id>
+
+Summary:
+Show results of an operation.
+
+Global Options:
+--debug  (= false)
+    Equivalent to --show-log --logging-config=<root>=DEBUG
+-h, --help  (= false)
+    Show help on a command or other topic.
+--logging-config (= "")
+    Specify log levels for modules
+--quiet  (= false)
+    Show no informational output
+--show-log  (= false)
+    If set, write the log file to stderr
+--verbose  (= false)
+    Show more verbose output
+
+Command Options:
+-B, --no-browser-login  (= false)
+    Do not use web browser for authentication
+--format  (= yaml)
+    Specify output format (json|yaml)
+-m, --model (= "")
+    Model to operate in. Accepts [<controller name>:]<model name>|<model UUID>
+-o, --output (= "")
+    Specify an output file
+--utc  (= false)
+    Show times in UTC
+--wait  (= -1s)
+    Wait for results
+--watch  (= false)
+    Wait indefinitely for results
+
+Details:
+Show the results returned by an operation with the given ID.  
+To block until the result is known completed or failed, use
+the --wait option with a duration, as in --wait 5s or --wait 1h.
+Use --watch to wait indefinitely.  
+
+The default behavior without --wait or --watch is to immediately check and return;
+if the results are "pending" then only the available information will be
+displayed.  This is also the behavior when any negative time is given.
+
+Examples:
+
+    juju show-operation 1
+    juju show-operation 1 --wait=2m
+    juju show-operation 1 --watch
+
+See also:
+ - run
+ - operations
+ - show-task

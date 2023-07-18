@@ -1,0 +1,73 @@
+Usage: juju operations [options]
+
+Summary:
+Lists pending, running, or completed operations for specified application, units, machines, or all.
+
+Global Options:
+--debug  (= false)
+    Equivalent to --show-log --logging-config=<root>=DEBUG
+-h, --help  (= false)
+    Show help on a command or other topic.
+--logging-config (= "")
+    Specify log levels for modules
+--quiet  (= false)
+    Show no informational output
+--show-log  (= false)
+    If set, write the log file to stderr
+--verbose  (= false)
+    Show more verbose output
+
+Command Options:
+-B, --no-browser-login  (= false)
+    Do not use web browser for authentication
+--actions  (= )
+    Comma separated list of actions names to filter on
+--apps, --applications  (= )
+    Comma separated list of applications to filter on
+--format  (= plain)
+    Specify output format (json|plain|yaml)
+--limit  (= 0)
+    The maximum number of operations to return
+-m, --model (= "")
+    Model to operate in. Accepts [<controller name>:]<model name>|<model UUID>
+--machines  (= )
+    Comma separated list of machines to filter on
+-o, --output (= "")
+    Specify an output file
+--offset  (= 0)
+    Return operations from offset onwards
+--status  (= )
+    Comma separated list of operation status values to filter on
+--units  (= )
+    Comma separated list of units to filter on
+--utc  (= false)
+    Show times in UTC
+
+Details:
+List the operations with the specified query criteria.
+When an application is specified, all units from that application are relevant.
+
+When run without any arguments, operations corresponding to actions for all
+application units are returned.
+To see operations corresponding to juju run tasks, specify an action name
+"juju-exec" and/or one or more machines.
+
+Aliases: list-operations
+
+Examples:
+
+    juju operations
+    juju operations --format yaml
+    juju operations --actions juju-exec
+    juju operations --actions backup,restore
+    juju operations --apps mysql,mediawiki
+    juju operations --units mysql/0,mediawiki/1
+    juju operations --machines 0,1
+    juju operations --status pending,completed
+    juju operations --apps mysql --units mediawiki/0 --status running --actions backup
+
+
+See also:
+ - run
+ - show-operation
+ - show-task

@@ -1,0 +1,39 @@
+Usage: juju add-space [options] <name> [<CIDR1> <CIDR2> ...]
+
+Summary:
+Add a new network space.
+
+Global Options:
+--debug  (= false)
+    Equivalent to --show-log --logging-config=<root>=DEBUG
+-h, --help  (= false)
+    Show help on a command or other topic.
+--logging-config (= "")
+    Specify log levels for modules
+--quiet  (= false)
+    Show no informational output
+--show-log  (= false)
+    If set, write the log file to stderr
+--verbose  (= false)
+    Show more verbose output
+
+Command Options:
+-B, --no-browser-login  (= false)
+    Do not use web browser for authentication
+-m, --model (= "")
+    Model to operate in. Accepts [<controller name>:]<model name>|<model UUID>
+
+Details:
+Adds a new space with the given name and associates the given
+(optional) list of existing subnet CIDRs with it.
+
+Examples:
+
+
+Add space "beta" with subnet 172.31.0.0/20:
+    
+    juju add-space beta 172.31.0.0/20
+
+See also:
+ - spaces
+ - remove-space

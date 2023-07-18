@@ -1,0 +1,45 @@
+Usage: juju set-firewall-rule [options] <service-name>, --allowlist <cidr>[,<cidr>...]
+
+Summary:
+Sets a firewall rule.
+
+Global Options:
+--debug  (= false)
+    Equivalent to --show-log --logging-config=<root>=DEBUG
+-h, --help  (= false)
+    Show help on a command or other topic.
+--logging-config (= "")
+    Specify log levels for modules
+--quiet  (= false)
+    Show no informational output
+--show-log  (= false)
+    If set, write the log file to stderr
+--verbose  (= false)
+    Show more verbose output
+
+Command Options:
+--allowlist (= "")
+    list of subnets to allowlist
+-m, --model (= "")
+    Model to operate in. Accepts [<controller name>:]<model name>|<model UUID>
+--whitelist (= "")
+    
+
+Details:
+Firewall rules control ingress to a well known services
+within a Juju model. A rule consists of the service name
+and a allowlist of allowed ingress subnets.
+The currently supported services are:
+- ssh
+- juju-application-offer
+
+DEPRECATION WARNING: Firewall rules have been moved to model-config settings "ssh-allow" and
+"saas-ingress-allow". This command is deprecated in favour of
+reading/writing directly to these settings.
+
+Examples:
+
+    juju set-firewall-rule ssh --allowlist 192.168.1.0/16
+
+See also:
+ - firewall-rules

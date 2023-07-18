@@ -1,0 +1,45 @@
+Usage: juju payloads [options] [pattern ...]
+
+Summary:
+Display status information about known payloads.
+
+Global Options:
+--debug  (= false)
+    Equivalent to --show-log --logging-config=<root>=DEBUG
+-h, --help  (= false)
+    Show help on a command or other topic.
+--logging-config (= "")
+    Specify log levels for modules
+--quiet  (= false)
+    Show no informational output
+--show-log  (= false)
+    If set, write the log file to stderr
+--verbose  (= false)
+    Show more verbose output
+
+Command Options:
+-B, --no-browser-login  (= false)
+    Do not use web browser for authentication
+--format  (= tabular)
+    Specify output format (json|tabular|yaml)
+-m, --model (= "")
+    Model to operate in. Accepts [<controller name>:]<model name>|<model UUID>
+-o, --output (= "")
+    Specify an output file
+
+Details:
+This command will report on the runtime state of defined payloads.
+
+When one or more pattern is given, Juju will limit the results to only
+those payloads which match *any* of the provided patterns. Each pattern
+will be checked against the following info in Juju:
+
+- unit name
+- machine id
+- payload type
+- payload class
+- payload id
+- payload tag
+- payload status
+
+Aliases: list-payloads

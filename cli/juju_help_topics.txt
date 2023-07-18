@@ -1,0 +1,4 @@
+basics          Basic Help Summary
+commands        Basic help for all commands
+global-options  Options common to all commands
+topics          Topic list

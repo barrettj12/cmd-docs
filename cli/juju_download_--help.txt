@@ -1,0 +1,52 @@
+Usage: juju download [options] [options] <charm>
+
+Summary:
+Locates and then downloads a CharmHub charm.
+
+Global Options:
+--debug  (= false)
+    Equivalent to --show-log --logging-config=<root>=DEBUG
+-h, --help  (= false)
+    Show help on a command or other topic.
+--logging-config (= "")
+    Specify log levels for modules
+--quiet  (= false)
+    Show no informational output
+--show-log  (= false)
+    If set, write the log file to stderr
+--verbose  (= false)
+    Show more verbose output
+
+Command Options:
+--arch (= "all")
+    specify an arch <all|amd64|arm64|ppc64el|riscv64|s390x>
+--base (= "")
+    specify a base
+--channel (= "")
+    specify a channel to use instead of the default release
+--charmhub-url (= "https://api.charmhub.io")
+    specify the Charmhub URL for querying the store
+--filepath (= "")
+    filepath location of the charm to download to
+--no-progress  (= false)
+    disable the progress bar
+--series (= "all")
+    specify a series. DEPRECATED use --base
+
+Details:
+Download a charm to the current directory from the CharmHub store
+by a specified name. Downloading for a specific base can be done via
+--base. --base can be specified using the OS name and the version of
+the OS, separated by @. For example, --base ubuntu@22.04.
+
+Adding a hyphen as the second argument allows the download to be piped
+to stdout.
+
+Examples:
+
+    juju download postgresql
+    juju download postgresql --no-progress - > postgresql.charm
+
+See also:
+ - info
+ - find

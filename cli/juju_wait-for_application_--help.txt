@@ -1,0 +1,29 @@
+Usage: juju wait-for application [options] [<name>]
+
+Summary:
+Wait for an application to reach a specified state.
+
+Global Options:
+-h, --help  (= false)
+    Show help on a command or other topic.
+
+Command Options:
+-B, --no-browser-login  (= false)
+    Do not use web browser for authentication
+-m, --model (= "")
+    Model to operate in. Accepts [<controller name>:]<model name>|<model UUID>
+--query (= "life==\"alive\" && status==\"active\"")
+    query the goal state
+--summary  (= true)
+    output a summary of the application query on exit
+--timeout  (= 10m0s)
+    how long to wait, before timing out
+
+Details:
+Waits for an application to reach a specified state.
+arguments:
+name
+   application name identifier
+options:
+--query (= 'life=="alive" && status=="active"')
+   query represents the sought state of the specified application

@@ -1,0 +1,44 @@
+Usage: juju firewall-rules [options]
+
+Summary:
+Prints the firewall rules.
+
+Global Options:
+--debug  (= false)
+    Equivalent to --show-log --logging-config=<root>=DEBUG
+-h, --help  (= false)
+    Show help on a command or other topic.
+--logging-config (= "")
+    Specify log levels for modules
+--quiet  (= false)
+    Show no informational output
+--show-log  (= false)
+    If set, write the log file to stderr
+--verbose  (= false)
+    Show more verbose output
+
+Command Options:
+--format  (= tabular)
+    Specify output format (json|tabular|yaml)
+-m, --model (= "")
+    Model to operate in. Accepts [<controller name>:]<model name>|<model UUID>
+-o, --output (= "")
+    Specify an output file
+
+Details:
+Lists the firewall rules which control ingress to well known services
+within a Juju model.
+
+DEPRECATION WARNING: Firewall rules have been moved to model-config settings "ssh-allow" and
+"saas-ingress-allow". This command is deprecated in favour of
+reading/writing directly to these settings.
+
+Aliases: list-firewall-rules
+
+Examples:
+
+    juju firewall-rules
+
+
+See also:
+ - set-firewall-rule
